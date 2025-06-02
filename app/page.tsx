@@ -68,6 +68,8 @@ export default function HomePage() {
 														width={240}
 														height={240}
 														style={{ borderRadius: "100%" }}
+														sizes="(max-width: 480px) 120px, (max-width: 768px) 180px, 240px"
+														priority
 													/>
 												</span>
 											</div>

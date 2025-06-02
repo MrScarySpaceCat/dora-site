@@ -1,6 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
+import { Baloo_2 } from "next/font/google";
 import React from "react";
+
+const poppins = Poppins({
+	subsets: ["latin"],
+	weight: ["400", "700", "900"],
+	variable: "--font-poppins",
+	display: "swap",
+});
+
+const baloo = Baloo_2({
+	subsets: ["latin"],
+	weight: ["400"],
+	variable: "--font-baloo",
+	display: "swap",
+});
 
 export const metadata: Metadata = {
 	title: "🌸",
@@ -32,7 +48,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${poppins.variable} ${baloo.variable}`}>
 			<head>
 				<meta name="color-scheme" content="light only" />
 				<link rel="canonical" href="https://dasunnydora.art" />

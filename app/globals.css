@@ -183,7 +183,7 @@ body:before {
 	--viewport-height: 100vh;
 }
 html {
-	font-size: 18pt;
+	font-size: 18px;
 }
 u {
 	text-decoration: underline;
@@ -1601,16 +1601,20 @@ p spoiler-text {
 	position: relative;
 }
 .gallery ul li .frame {
-	display: inline-block;
-	overflow: hidden;
-	vertical-align: top;
+	width: 180px;
+	height: 150px;
+	aspect-ratio: 6/5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .gallery ul li img {
-	margin: 0;
-	max-width: 100%;
-	vertical-align: top;
-	width: auto;
+	width: auto !important;
+	height: 100% !important;
+	max-height: 100% !important;
+	object-fit: contain;
 }
+
 .gallery ul li .caption {
 	width: 100%;
 }
@@ -1733,28 +1737,24 @@ p spoiler-text {
 #credits span {
 	color: rgba(128, 128, 128, 0.498);
 }
-@media (max-width: 1920px) {
-}
 @media (max-width: 1680px) {
 	html {
-		font-size: 13pt;
+		font-size: 16px;
 	}
 }
 @media (max-width: 1280px) {
 	html {
-		font-size: 13pt;
+		font-size: 16px;
 	}
-}
-@media (max-width: 1024px) {
 }
 @media (max-width: 980px) {
 	html {
-		font-size: 11pt;
+		font-size: 16px;
 	}
 }
 @media (max-width: 736px) {
 	html {
-		font-size: 11pt;
+		font-size: 16px;
 	}
 	#main > .inner {
 		--padding-horizontal: 1.5rem;
@@ -2014,13 +2014,17 @@ p spoiler-text {
 	#footer {
 		margin-top: 0.5625rem !important;
 	}
+	#text03,
+	#text08,
+	#text09,
+	#text10,
+	#text12 {
+		font-size: 1em !important;
+	}
 }
 @media (max-width: 480px) {
 	#main > .inner {
 		--spacing: 0.65625rem;
-	}
-	#image03 .frame {
-		height: 7rem !important;
 	}
 	#buttons01 li a {
 		width: 4.375rem;
@@ -2116,6 +2120,9 @@ p spoiler-text {
 	#gallery01 ul {
 		gap: 0.1875rem;
 	}
+	html {
+		font-size: 14px;
+	}
 }
 
 body {
@@ -2138,4 +2145,23 @@ body {
 	transform: none !important;
 	transition: none !important;
 	filter: none !important;
+}
+
+#text03,
+#text01,
+#text06,
+#text08,
+#text07,
+#text09,
+#text05,
+#text10,
+#text11,
+#text12 {
+	color: #a05596; /* previously #d6a4cd, now a deeper purple for 4.5:1 contrast */
+}
+
+#buttons01 .button,
+#buttons02 .button {
+	color: #fff;
+	background-color: #a464a1;
 }
