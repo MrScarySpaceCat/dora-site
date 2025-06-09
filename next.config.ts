@@ -5,6 +5,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 module.exports = withBundleAnalyzer({
 	images: {
-		minimumCacheTTL: 60, // cache optimized images for 60 seconds
+		minimumCacheTTL: 3600, // cache optimized images for 60 seconds
+		formats: ["image/webp"],
 	},
 });

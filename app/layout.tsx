@@ -48,7 +48,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className={`${poppins.variable} ${baloo.variable}`}>
+		<html lang="en">
 			<head>
 				<meta name="color-scheme" content="light only" />
 				<link rel="canonical" href="https://dasunnydora.art" />

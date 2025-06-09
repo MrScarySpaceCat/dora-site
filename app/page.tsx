@@ -60,14 +60,36 @@ export default function HomePage() {
 								<div className="wrapper">
 									<div className="inner">
 										<div>
-											<div id="image02" className="image">
-												<span className="frame deferred">
+											<div
+												id="image02"
+												className="image"
+												style={{
+													display: "flex",
+													alignItems: "flex-end",
+													height: "100%",
+												}}
+											>
+												<span
+													className="frame deferred"
+													style={{
+														display: "flex",
+														alignItems: "flex-end",
+														height: "100%",
+														width: "100%",
+													}}
+												>
 													<Image
 														src="/images/image02.jpg?v=ef1f2591"
 														alt=""
 														width={240}
 														height={240}
-														style={{ borderRadius: "100%" }}
+														style={{
+															borderRadius: "100%",
+															objectFit: "cover",
+															objectPosition: "bottom",
+															width: "100%",
+															height: "100%",
+														}}
 														sizes="(max-width: 480px) 120px, (max-width: 768px) 180px, 240px"
 														priority
 													/>
