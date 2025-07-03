@@ -26,6 +26,26 @@ function Button({ href, onClick, className, children, ...props }: ButtonProps) {
 	);
 }
 
+function exactAgeFromUnix(birthTs: number) {
+	const now = new Date();
+	const b = new Date(birthTs * 1000);
+	let years = now.getFullYear() - b.getFullYear();
+	let months = now.getMonth() - b.getMonth();
+	let days = now.getDate() - b.getDate();
+
+	if (days < 0) {
+		months--;
+		const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+		days += prevMonth;
+	}
+	if (months < 0) {
+		years--;
+		months += 12;
+	}
+
+	return { years, months, days };
+}
+
 export default function HomePage() {
 	const [active, setActive] = useState<"home" | "second">("home");
 
@@ -49,6 +69,9 @@ export default function HomePage() {
 		window.location.hash = "#second";
 		setActive("second");
 	};
+
+	const birthTs = 1214492400;
+	const exact = exactAgeFromUnix(birthTs);
 
 	return (
 		<>
@@ -109,8 +132,8 @@ export default function HomePage() {
 												</li>
 											</ul>
 											<p id="text03">
-												Hello everyone! im <strong>Dora</strong>, currently a
-												minor (16).
+												Hello everyone! im <strong>Dora</strong>, currently{" "}
+												{exact.years}-years-old.
 												<em> Japanese</em>, <strong>timezone</strong> GMT +9.
 												Trilingual <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
 											</p>

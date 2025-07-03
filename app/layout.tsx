@@ -1,22 +1,22 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
-import { Baloo_2 } from "next/font/google";
+// import { Poppins } from "next/font/google";
+// import { Baloo_2 } from "next/font/google";
 import React from "react";
 
-const poppins = Poppins({
-	subsets: ["latin"],
-	weight: ["400", "700", "900"],
-	variable: "--font-poppins",
-	display: "swap",
-});
+// const poppins = Poppins({
+// 	subsets: ["latin"],
+// 	weight: ["400", "700", "900"],
+// 	variable: "--font-poppins",
+// 	display: "swap",
+// });
 
-const baloo = Baloo_2({
-	subsets: ["latin"],
-	weight: ["400"],
-	variable: "--font-baloo",
-	display: "swap",
-});
+// const baloo = Baloo_2({
+// 	subsets: ["latin"],
+// 	weight: ["400"],
+// 	variable: "--font-baloo",
+// 	display: "swap",
+// });
 
 export const metadata: Metadata = {
 	title: "🌸",
