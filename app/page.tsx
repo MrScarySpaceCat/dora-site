@@ -102,7 +102,7 @@ export default function HomePage() {
 													}}
 												>
 													<Image
-														src="/images/image02.jpg?v=ef1f2591"
+														src="/images/image02.jpg"
 														alt=""
 														width={240}
 														height={240}
@@ -188,7 +188,7 @@ export default function HomePage() {
 											>
 												<span className="frame">
 													<Image
-														src="/images/image03.jpg?v=ef1f2591"
+														src="/images/image03.jpg"
 														alt=""
 														width={180}
 														height={148}
@@ -237,8 +237,34 @@ export default function HomePage() {
 												<ul>
 													<li>
 														<span className="frame">
+															<Image 
+																src="/images/gallery01/imageguh.png"
+																alt="Untitled"
+																width={360}
+																height={300}
+																style={{"maxHeight": "8.75rem"}}
+															/>
+														</span>
+													</li>
+													<li>
+														<span className="frame">
+															<Image 
+																src="/images/gallery01/imagebuh.png"
+																alt="Untitled"
+																width={360}
+																height={300}
+																style={{"maxHeight": "8.75rem"}}
+															/>
+														</span>
+													</li>
+												</ul>
+											</div>
+											<div className="inner">	
+												<ul>
+													<li>
+														<span className="frame">
 															<Image
-																src="/images/gallery01/935f677b.jpg?v=ef1f2591"
+																src="/images/gallery01/935f677b.jpg"
 																alt="Untitled"
 																width={180}
 																height={150}
@@ -248,7 +274,7 @@ export default function HomePage() {
 													<li>
 														<span className="frame">
 															<Image
-																src="/images/gallery01/fbb56c74.jpg?v=ef1f2591"
+																src="/images/gallery01/fbb56c74.jpg"
 																alt="Untitled"
 																width={180}
 																height={150}
@@ -258,7 +284,7 @@ export default function HomePage() {
 													<li>
 														<span className="frame">
 															<Image
-																src="/images/gallery01/8ec8a936.jpg?v=ef1f2591"
+																src="/images/gallery01/8ec8a936.jpg"
 																alt="Untitled"
 																width={180}
 																height={150}
@@ -268,7 +294,7 @@ export default function HomePage() {
 													<li>
 														<span className="frame">
 															<Image
-																src="/images/gallery01/92c6565f.jpg?v=ef1f2591"
+																src="/images/gallery01/92c6565f.jpg"
 																alt="Untitled"
 																width={180}
 																height={150}
