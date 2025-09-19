@@ -70,7 +70,7 @@ export default function HomePage() {
 		setActive("second");
 	};
 
-	const birthTs = 1214492400;
+	const birthTs = 1214514000;
 	const exact = exactAgeFromUnix(birthTs);
 
 	return (
@@ -132,10 +132,7 @@ export default function HomePage() {
 												</li>
 											</ul>
 											<p id="text03">
-												Hello everyone! im <strong>Dora</strong>, currently{" "}
-												{exact.years}-years-old.
-												<em> Japanese</em>, <strong>timezone</strong> GMT +9.
-												Trilingual <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
+												Hello everyone! I&apos;m <strong>Dora</strong>. Currently I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am fluent in <strong>English, Arabic, and Japanese</strong>. <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
 											</p>
 										</div>
 									</div>
@@ -174,10 +171,10 @@ export default function HomePage() {
 											<h2 id="text07">Likes &amp; Dislikes</h2>
 											<p id="text09">
 												<span className="p">
-													<strong>What I like</strong> cats, chocolate, Roblox,
+													<strong>What I like</strong>: cats, chocolate, Roblox,
 													rhythm games, and words of kindness &gt;:3
 													<br />
-													<strong>What I dislike</strong> cruelty, overdoing
+													<strong>What I dislike</strong>: cruelty, overdoing
 													offensive jokes and making too much of them, and
 													toxicity.
 												</span>
@@ -210,18 +207,13 @@ export default function HomePage() {
 								<div className="wrapper">
 									<div className="inner">
 										<div>
-											<h2 id="text05">Before you Interact</h2>
-											<p id="text10">
-												I&apos;m a really sensitive person, so please watch the
-												insults you say towards me, I can&apos;t tell sarcasm if
-												tone tags aren&apos;t included.
-											</p>
+											<h1 id="text06">Before you Interact</h1>	
 										</div>
 										<div>
-											<h2 id="text11">Don&apos;t Interact if</h2>
-											<p id="text12">
-												nothing idk I tolerate a lot of weird shit . . .
-											</p>
+											<p id="text10">
+												I&apos;m a really sensitive person, so please watch the
+												insults you say towards me. I can&apos;t tell if someone is being sarcastic if unspecified.
+											</p>	
 										</div>
 									</div>
 								</div>
@@ -293,16 +285,16 @@ export default function HomePage() {
 								<div className="wrapper">
 									<div className="inner">
 										<div>
-											<h2 id="text06">Commission</h2>
+											<h1 id="text06">Commissions</h1>
 										</div>
 										<div>
 											<p id="text08">
-												<em>note</em> Im doing art commissions for robux or
-												discord nitro, if ur interested please dm&nbsp;
+												<em>Note</em>: I&apos;m doing art commissions for Robux or
+												Discord nitro, if you&apos;re interested, please DM&nbsp;
 												<a href="https://discord.com/users/1224337224313864224">
 													@dasunnydora
 												</a>{" "}
-												on discord
+												on Discord
 											</p>
 										</div>
 									</div>
