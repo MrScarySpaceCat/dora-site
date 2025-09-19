@@ -132,7 +132,7 @@ export default function HomePage() {
 												</li>
 											</ul>
 											<p id="text03">
-												Hello everyone! I&apos;m <strong>Dora</strong>. Currently I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am fluent in <strong>English, Arabic, and Japanese</strong>. <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
+												Hello everyone! I&apos;m <strong>Dora</strong>. Currently, I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am fluent in <strong>English, Arabic, and Japanese</strong>. <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
 											</p>
 										</div>
 									</div>
@@ -290,11 +290,11 @@ export default function HomePage() {
 										<div>
 											<p id="text08">
 												<em>Note</em>: I&apos;m doing art commissions for Robux or
-												Discord nitro, if you&apos;re interested, please DM&nbsp;
+												Discord nitro. If you&apos;re interested, please DM&nbsp;
 												<a href="https://discord.com/users/1224337224313864224">
 													@dasunnydora
 												</a>{" "}
-												on Discord
+												on Discord.
 											</p>
 										</div>
 									</div>
