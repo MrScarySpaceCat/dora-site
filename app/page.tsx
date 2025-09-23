@@ -132,7 +132,7 @@ export default function HomePage() {
 												</li>
 											</ul>
 											<p id="text03">
-												Hello everyone! I&apos;m <strong>Dora</strong>. Currently, I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am fluent in <strong>English, Arabic, and Japanese</strong>. <strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
+												Hello everyone! I&apos;m <strong>Dora</strong>. Currently, I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am Japanese and trilingual. <br /><strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
 											</p>
 										</div>
 									</div>
@@ -242,7 +242,7 @@ export default function HomePage() {
 																alt="Untitled"
 																width={360}
 																height={300}
-																style={{"maxHeight": "8.75rem"}}
+																style={{"maxHeight": "10rem"}}
 															/>
 														</span>
 													</li>
@@ -253,7 +253,7 @@ export default function HomePage() {
 																alt="Untitled"
 																width={360}
 																height={300}
-																style={{"maxHeight": "8.75rem"}}
+																style={{"maxHeight": "10rem"}}
 															/>
 														</span>
 													</li>
