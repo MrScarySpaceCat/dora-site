@@ -70,7 +70,7 @@ export default function HomePage() {
 		setActive("second");
 	};
 
-	const birthTs = 1214514000;
+	const birthTs = 1214557200;
 	const exact = exactAgeFromUnix(birthTs);
 
 	return (
@@ -132,7 +132,7 @@ export default function HomePage() {
 												</li>
 											</ul>
 											<p id="text03">
-												Hello everyone! I&apos;m <strong>Dora</strong>. Currently, I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am Japanese and trilingual. <br /><strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
+												Hello everyone! I&apos;m <strong>Dora</strong> or <strong>Maya</strong>. Currently, I am <strong>{exact.years}</strong>-years-old. My timezone is <strong>GMT +3</strong>. I am Syrian and bilingual. <br /><strong>૮ ˶ᵔ ᵕ ᵔ˶ ა</strong>
 											</p>
 										</div>
 									</div>
@@ -207,13 +207,13 @@ export default function HomePage() {
 								<div className="wrapper">
 									<div className="inner">
 										<div>
-											<h1 id="text06">Before you Interact</h1>	
+											<h1 id="text06">Before you Interact</h1>
 										</div>
 										<div>
 											<p id="text10">
 												I&apos;m a really sensitive person, so please watch the
 												insults you say towards me. I can&apos;t tell if someone is being sarcastic if unspecified.
-											</p>	
+											</p>
 										</div>
 									</div>
 								</div>
@@ -237,29 +237,29 @@ export default function HomePage() {
 												<ul>
 													<li>
 														<span className="frame">
-															<Image 
+															<Image
 																src="/images/gallery01/imageguh.png"
 																alt="Untitled"
 																width={360}
 																height={300}
-																style={{"maxHeight": "10rem"}}
+																style={{ "maxHeight": "10rem" }}
 															/>
 														</span>
 													</li>
 													<li>
 														<span className="frame">
-															<Image 
+															<Image
 																src="/images/gallery01/imagebuh.png"
 																alt="Untitled"
 																width={360}
 																height={300}
-																style={{"maxHeight": "10rem"}}
+																style={{ "maxHeight": "10rem" }}
 															/>
 														</span>
 													</li>
 												</ul>
 											</div>
-											<div className="inner">	
+											<div className="inner">
 												<ul>
 													<li>
 														<span className="frame">
@@ -315,8 +315,7 @@ export default function HomePage() {
 										</div>
 										<div>
 											<p id="text08">
-												<em>Note</em>: I&apos;m doing art commissions for Robux or
-												Discord nitro. If you&apos;re interested, please DM&nbsp;
+												<em>Note</em>: I&apos;m doing art commissions for Discord nitro. If you&apos;re interested, please DM&nbsp;
 												<a href="https://discord.com/users/1224337224313864224">
 													@dasunnydora
 												</a>{" "}
