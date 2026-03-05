@@ -38,7 +38,7 @@ async fn main() {
     // Create a reusable closure to render template
     let handlebars = move |with_template| render(with_template, hb.clone());
 
-    let exactage = DateTime::from_timestamp(1150215360, 0).expect("Invalid timestamp");
+    let exactage = DateTime::from_timestamp(1214557200, 0).expect("Invalid timestamp");
 
     //GET /
     let route = warp::get()
