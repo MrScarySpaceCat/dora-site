@@ -1,0 +1,12 @@
+[package]
+name = "my-site"
+version = "2.0.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1.50.0", features = ["full"] }
+warp = { version = "0.4.2", features = ["server", "compression"] }
+serde = { version = "1.0.228" }
+serde_json = { version = "1.0.149" }
+handlebars = { version = "6.4.0" }
+chrono = { version = "0.4.44" }
