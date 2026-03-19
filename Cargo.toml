@@ -10,3 +10,4 @@ serde = { version = "1.0.228" }
 serde_json = { version = "1.0.149" }
 handlebars = { version = "6.4.0" }
 chrono = { version = "0.4.44" }
+native-tls = { version = "0.2.18" }
