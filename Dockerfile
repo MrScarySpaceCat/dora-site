@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
-ARG RUST_VERSION=1.93.1
-ARG APP_NAME=my-site
+ARG RUST_VERSION=1.94.1
+ARG APP_NAME=dora-site
 ARG UID=10001
 
 ################################################################################
@@ -10,7 +10,7 @@ ARG UID=10001
 FROM rust:${RUST_VERSION}-trixie AS build
 ARG APP_NAME
 
-# Set working directory
+ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /app
 
 # Install build dependencies
@@ -35,29 +35,39 @@ RUN apt-get update \
 # Copy manifest and source via bind mounts / cache mounts for fast rebuilds.
 # (Use docker build --mount for optimal caching.)
 # Compile in release mode, then copy the resulting binary to /bin/server.
-COPY . .
+COPY Cargo.toml Cargo.lock ./
+COPY src/ ./src/
 
 RUN --mount=type=cache,target=/app/target/ \
     --mount=type=cache,target=/usr/local/cargo/git/db \
     --mount=type=cache,target=/usr/local/cargo/registry/ \
-    cargo build --locked --release && cp target/release/${APP_NAME} /bin/server
+    cargo build --locked --release && cp target/release/${APP_NAME} /app/server
 
 ################################################################################
 # Runtime stage: minimal Debian slim environment
 
-FROM debian:trixie-slim AS final
+FROM debian:trixie AS final
 ARG UID
 
-# Install only what's needed to run the binary
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-    ca-certificates \
-    && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=noninteractive
 
-# Create system user using useradd/usergroup
-RUN groupadd -r appuser -g "${UID}" \
-    && useradd -l -r -u "${UID}" -g appuser \
-    -d /nonexistent -s /usr/sbin/nologin appuser
+RUN groupadd \
+    --gid "${UID}" \
+    --system \
+    appuser \ 
+    && useradd \
+    --create-home \
+    --uid "${UID}" \
+    --gid "${UID}" \
+    --no-log-init \
+    --system \
+    appuser
+
+RUN apt-get update \
+    && apt-get install -y \
+    ca-certificates \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Switch to unprivileged user
 USER appuser
@@ -68,10 +78,10 @@ COPY ./templates ./templates
 COPY ./static ./static
 
 # Copy the compiled binary from the build stage
-COPY --from=build /bin/server /bin/server
+COPY --from=build /app/server /app/server
 
 # Expose application port
 EXPOSE 3000
 
 # Start the server
-CMD ["/bin/server"]
+CMD ["/app/server"]
