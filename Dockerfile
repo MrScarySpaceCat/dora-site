@@ -2,7 +2,7 @@
 
 ARG RUST_VERSION=1.95.0
 ARG APP_NAME=dora-site
-ARG UID=10001
+ARG UID=1000
 
 FROM rust:${RUST_VERSION}-trixie AS build
 ARG APP_NAME
@@ -14,10 +14,12 @@ WORKDIR /app
 RUN apt-get update \
     && apt-get install -y \
     cmake \
+    libssl-dev \
+    ca-certificates \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY Cargo.toml Cargo.lock ./
+COPY Cargo.toml Cargo.lock .cargo ./
 COPY src/ ./src/
 
 RUN --mount=type=cache,target=/app/target/ \
@@ -38,7 +40,6 @@ RUN groupadd \
     --system \
     appuser \ 
     && useradd \
-    --create-home \
     --uid "${UID}" \
     --gid "${UID}" \
     --no-log-init \
