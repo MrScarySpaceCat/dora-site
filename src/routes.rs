@@ -1,4 +1,4 @@
-use chrono::{Datelike, Utc};
+use chrono::{DateTime, Utc};
 use serde_json::{Value, json};
 
 pub struct Route {
@@ -13,7 +13,7 @@ impl Route {
             Route {
                 path: "",
                 template: "index.html",
-                data: || json!({ "year": Utc::now().year() }),
+                data: || json!({ "exactage": Utc::now().years_since(DateTime::from_timestamp(1214557200, 0).expect("Invalid timestamp")).expect("Exact years couldn't be calculated") }),
             },
             // Add new pages here:
             // Route {
